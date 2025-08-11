@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GranCole - Login</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <div class="split" role="main">
+    <!-- Sección izquierda: vacía -->
+    <aside class="left" aria-hidden="true"></aside>
+
+    <!-- Sección derecha: contenido -->
+    <section class="right" aria-label="Área de inicio de sesión">
+      <div class="card" role="region" aria-labelledby="bienvenido-titulo">
+        <!-- Espacio circular para imagen -->
+        <div class="avatar" aria-hidden="true">
+          <!-- Puedes reemplazar IMG por una imagen real:
+               <img src="ruta-a-tu-imagen.jpg" alt="Descripción"> -->
+          IMG
+        </div>
+
+        <!-- Título y subtítulo -->
+        <h1 id="bienvenido-titulo" class="title">Bienvenido a GranCole</h1>
+        <p class="subtitle">Inicia sesión para continuar</p>
+
+        <!-- Contenedor del formulario -->
+        <div class="form-card" role="form" aria-labelledby="login-titulo">
+          <h3 id="login-titulo">Iniciar sesión</h3>
+          <p class="lead">Ingresa tus credenciales para acceder al sistema</p>
+
+          <div>
+            <label for="username">usuario</label>
+            <input id="username" name="username" type="text" autocomplete="username" required />
+          </div>
+
+          <div>
+            <label for="password">contraseña</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" required />
+          </div>
+
+          <a class="forgot" href="#" tabindex="0">Olvidaste tu contraseña?</a>
+
+          <button class="btn" type="submit">iniciar sesion</button>
+
+          <p class="small">No tienes cuenta?
+            <a class="link" href="#" tabindex="0">contacta al administrador</a>
+          </p>
+
+          <p class="footer">2025 GranCole Pro. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
