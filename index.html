@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>GranCole - Login</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="split" role="main">
+    <!-- Sección izquierda con imagen -->
+    <aside class="left" aria-hidden="true">
+        <div class="promo-container">
+            <h2 class="promo-title">GranCole Pro</h2>
+            <h4 class="promo-subtitle">Sistema de Gestión Educativa</h4>
+          
+            <h1 class="promo-heading">Gestiona tu institución educativa de manera inteligente</h1>
+            <p class="promo-description">
+              Plataforma integral para administrar estudiantes, profesores, calificaciones, asistencia y mucho más en un solo lugar.
+            </p>
+          
+            <ul class="promo-list">
+              <li>Gestión completa de estudiantes y profesores</li>
+              <li>Sistema de calificaciones y boletines</li>
+              <li>Control de asistencia en tiempo real</li>
+              <li>Comunicación integrada y foros</li>
+            </ul>
+          
+            <div class="promo-stats">
+              <div>
+                <h2>1,234+</h2>
+                <p>Estudiantes</p>
+              </div>
+              <div>
+                <h2>45+</h2>
+                <p>Cursos</p>
+              </div>
+              <div>
+                <h2>98%</h2>
+                <p>Certificaciones</p>
+              </div>
+            </div>
+          </div>
+    </aside>
+
+    <!-- Sección derecha -->
+    <section class="right" aria-label="Área de inicio de sesión">
+      <div class="card" role="region" aria-labelledby="bienvenido-titulo">
+        <!-- Espacio circular para imagen -->
+        <div class="avatar" aria-hidden="true">
+          <img src="https://www.colegioateniense.edu.co/images/articulos/escudo-2019.jpg" alt="">
+        </div>
+
+        <!-- Título y subtítulo -->
+        <h1 id="bienvenido-titulo" class="title">Bienvenido a GranCole</h1>
+        <p class="subtitle">Inicia sesión para continuar</p>
+
+        <!-- Contenedor del formulario -->
+        <div class="form-card" role="form" aria-labelledby="login-titulo">
+          <h3 id="login-titulo">Iniciar sesión</h3>
+          <p class="lead">Ingresa tus credenciales para acceder al sistema</p>
+
+          <div>
+            <label for="username">usuario</label>
+            <input id="username" name="username" type="text" autocomplete="username" required />
+          </div>
+
+          <div>
+            <label for="password">contraseña</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" required />
+          </div>
+
+          <a class="forgot" href="#" tabindex="0">Olvidaste tu contraseña?</a>
+
+          <button class="btn" type="submit">iniciar sesion</button>
+
+          <p class="small">No tienes cuenta?
+            <a class="link" href="#" tabindex="0">contacta al administrador</a>
+          </p>
+
+          <p class="footer">2025 GranCole Pro. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer>
+    <p>2025 GranCole Pro. Todos los derechos reservados. Diseñado por Clopez.co</p>
+  </footer>
+</body>
+</html>
