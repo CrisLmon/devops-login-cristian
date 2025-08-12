@@ -7,16 +7,23 @@ html, body {
   background: #f8fafc;
 }
 
-/* Contenedor principal: divide la pantalla en dos columnas */
+/* Contenedor principal */
 .split {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* 50% - 50% */
+  grid-template-columns: 1fr 1fr;
   min-height: 100vh;
 }
 
-/* Sección izquierda */
+/* Sección izquierda con imagen y overlay púrpura */
 .left {
-  background: linear-gradient(180deg, #eef2ff 0%, #ffffff 100%);
+  position: relative;
+  background: url('https://cdn2.opendemocracy.net/media/original_images/GettyImages-1645160129.jpg') center/cover no-repeat;
+}
+.left::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(124, 58, 237, 0.35); /* tono púrpura suave */
 }
 
 /* Sección derecha */
@@ -164,17 +171,27 @@ input[type="password"]:focus {
   text-align: center;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .split { grid-template-columns: 1fr; }
-  .left { display: none; }
-  .right { padding: 28px; }
-  .avatar { width: 96px; height: 96px; }
-  .title { font-size: 22px; }
+body footer{
+    background-color: #f0f0f0; /* Gris claro */
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: #333;
 }
 
-@media (max-width: 420px) {
-  .card { gap: 14px; padding: 8px; }
-  .form-card { padding: 16px; }
-  .title { font-size: 20px; }
-}
+/* Responsive */
+@media (max-width: 900px) {
+    .split { grid-template-columns: 1fr; }
+    .left { display: none; }
+    .right { padding: 28px; }
+    .avatar { width: 96px; height: 96px; }
+    .title { font-size: 22px; }
+  }
+  
+  @media (max-width: 420px) {
+    .card { gap: 14px; padding: 8px; }
+    .form-card { padding: 16px; }
+    .title { font-size: 20px; }
+  }
