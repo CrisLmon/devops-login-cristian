@@ -20,11 +20,85 @@ html, body {
   background: url('https://cdn2.opendemocracy.net/media/original_images/GettyImages-1645160129.jpg') center/cover no-repeat;
 }
 .left::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(124, 58, 237, 0.35); /* tono púrpura suave */
-}
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(124, 58, 237, 0.35); /* tono púrpura suave */
+    z-index: 0; /* Ensure the overlay is behind the text */
+  }
+
+  .promo-container {
+    position: relative; /* Ensure it is positioned relative to the parent */
+    z-index: 1; /* Place it above the purple overlay */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute content evenly */
+    align-items: center; /* Center text horizontally */
+    height: 90%; /* Use almost all of the height */
+    color: white;
+    text-align: center;
+    max-width: 500px;
+    margin: auto;
+    font-family: Arial, sans-serif;
+  }
+
+  .promo-title {
+    font-size: 1.5rem;
+    margin-top: 10%;
+  }
+  
+  .promo-subtitle {
+    font-size: 1rem;
+    font-weight: normal;
+ 
+  }
+  
+  .promo-heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 20px 0 10px;
+  }
+  
+  .promo-description {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .promo-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+  
+  .promo-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  .promo-list li::before {
+    content: "●";
+    color: #00ff85; /* Verde brillante */
+    position: absolute;
+    left: 0;
+  }
+  
+  .promo-stats {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  
+  .promo-stats h2 {
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .promo-stats p {
+    margin: 5px 0 0;
+    font-size: 0.9rem;
+  }
 
 /* Sección derecha */
 .right {
@@ -183,11 +257,24 @@ body footer{
 
 /* Responsive */
 @media (max-width: 900px) {
-    .split { grid-template-columns: 1fr; }
-    .left { display: none; }
-    .right { padding: 28px; }
-    .avatar { width: 96px; height: 96px; }
-    .title { font-size: 22px; }
+    .split {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto; /* Add rows for stacking */
+    }
+    .left {
+      display: block; /* Ensure the left section is visible */
+      order: -1; /* Move the left section to the top */
+    }
+    .right {
+      padding: 28px;
+    }
+    .avatar {
+      width: 96px;
+      height: 96px;
+    }
+    .title {
+      font-size: 22px;
+    }
   }
   
   @media (max-width: 420px) {
